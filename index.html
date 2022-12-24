@@ -5,38 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<!--   Feel free to remove these styles or customise in your own stylesheet 👍 
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
+
+
 </head>
 <body>
+    <div class="container">
+        <div class="text-div">
+          <h1>Learn to code by watching others</h1>
+          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable.</p>
 
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
+        </div>
+        <div class="form-div">
+          <section>
+            <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+          </section>
+          <form>
+            <div class="first-name-div enter-input">
+                <input type="text" name="first-name" placeholder="First Name" id="first-name-field">
+                <p class="error-message">
+                    First Name cannot be empty
+                </p>
+              </div>
+            <div class="last-name-div enter-input">
+              <input type="text" name="last-name" placeholder="Last Name" id="Last-name-field">
+              <p class="error-message">
+                First Name cannot be empty
+              </p>
+            </div>
+            <div class="email-div enter-input">  
+              <input type="email" name="email" placeholder="Email" id="email-field">
+              <p class="error-message">
+                First Name cannot be empty
+              </p>
+            </div>
+            <div class="password-div enter-input">
+              <input type="password" name="password" placeholder="Password" id="password-field">
+              <p class="error-message">
+                First Name cannot be empty
+              </p>
+            </div>
+            <button>Claim your free trial</button>
+            <p class="adv">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p> 
+          </form>
+        </div>
+  </div>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Santiago Alexander Rodríguez</a>.
     </p>
   </footer>
 </body>
+<script> src="index.js" </script>
 </html>
