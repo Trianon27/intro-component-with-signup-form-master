@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+ 
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -29,32 +30,32 @@
           <section>
             <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
           </section>
-          <form>
+          <form action="#" method="post" id="form-user">
             <div class="first-name-div enter-input">
-                <input type="text" name="first-name" placeholder="First Name" id="first-name-field">
+                <input type="text" name="first-name" placeholder="First Name" id="firstName">
                 <p class="error-message">
                     First Name cannot be empty
                 </p>
               </div>
             <div class="last-name-div enter-input">
-              <input type="text" name="last-name" placeholder="Last Name" id="Last-name-field">
+              <input type="text" name="last-name" placeholder="Last Name" id="lastName">
               <p class="error-message">
-                First Name cannot be empty
+                Last Name cannot be empty
               </p>
             </div>
             <div class="email-div enter-input">  
-              <input type="email" name="email" placeholder="Email" id="email-field">
+              <input type="email" name="email" placeholder="Email" id="email">
               <p class="error-message">
-                First Name cannot be empty
+                Looks like this is not an email
               </p>
             </div>
             <div class="password-div enter-input">
-              <input type="password" name="password" placeholder="Password" id="password-field">
+              <input type="password" name="password" placeholder="Password" id="password">
               <p class="error-message">
-                First Name cannot be empty
+                Password cannot be empty
               </p>
             </div>
-            <button>Claim your free trial</button>
+            <button id="submit">Claim your free trial</button>
             <p class="adv">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p> 
           </form>
         </div>
@@ -65,6 +66,8 @@
       Coded by <a href="#">Santiago Alexander Rodríguez</a>.
     </p>
   </footer>
+  <script src="./index.js"></script>
+
 </body>
-<script> src="index.js" </script>
+
 </html>

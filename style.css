@@ -115,7 +115,7 @@ body{
     border-radius: 5px;
     font-size: 1rem;
     padding: 0.5rem;
-    background-image: url(./images/icon-error.svg); 
+    background-image: none;
     background-repeat: no-repeat;
     background-position: 95% 50%;
 }
@@ -171,7 +171,15 @@ input::placeholder {
     color: hsl(0, 100%, 74%) ;
     font-size: 0.6rem;
     margin-top: .2rem;
+    display: none;
+}
 
+
+
+@media (max-width:600px){
+    :root{
+        font-size: 14px;
+    }
 }
 
 @media (max-width:475px) or (min-height: 750px) {
