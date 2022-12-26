@@ -130,6 +130,10 @@ input::placeholder {
     padding: 0rem 1rem;
 }
 
+.error-placeholder::-webkit-input-placeholder {
+    color: hsl(0, 100%, 74%) ;
+ }
+
 .container .form-div form button{
     width: 100%;
     height: 3rem;
@@ -182,7 +186,7 @@ input::placeholder {
     }
 }
 
-@media (max-width:475px) or (min-height: 750px) {
+@media (max-width:475px) or (min-height: 900px) {
 
 
         :root{

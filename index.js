@@ -11,7 +11,6 @@ const send = function(ev){
     let val = validation()
     if(val){
            reset_elements();
-           alert('Formulario enviado');
            document.getElementById('form-user').reset();      
         }        
     else{
@@ -44,6 +43,8 @@ const validation = function(){
         if(condition){
             return false
         } else{
+            inputs[2].classList.remove('error-placeholder');
+            inputs[2].placeholder='Email';
             return true
         }
 
@@ -52,6 +53,8 @@ const validation = function(){
         inputs[2].style.backgroundImage = 'url(./images/icon-error.svg)';
         inputs[2].value = '';
         inputs[2].placeholder='email@example.com';
+        inputs[2].classList.add('error-placeholder');
+
     }
 }    
 
