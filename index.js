@@ -9,30 +9,13 @@ const send = function(ev){
     ev.stopPropagation();
 
     let val = validation()
-    let emailv = emailVal();
-    var elements = document.getElementsByClassName('error-message');
-    var inputs = document.getElementsByTagName('input');
     if(val){
-        if(emailv){
- 
            reset_elements();
            alert('Formulario enviado');
-           document.getElementById('form-user').reset();
-        }
-        else{
-            reset_elements();
-            elements[2].style.display = 'flex';
-            inputs[2].style.backgroundImage = 'url(./images/icon-error.svg)';
-        }     
-    }
+           document.getElementById('form-user').reset();      
+        }        
     else{
-        for(var i = 0; i < elements.length; i++){
-            elements[i].style.display = 'flex';
-        }
-        //url(./images/icon-error.svg); 
-        for(var i = 0; i < inputs.length; i++){
-            inputs[i].style.backgroundImage = 'url(./images/icon-error.svg)';
-        }
+
     }
 
   
@@ -40,21 +23,38 @@ const send = function(ev){
 }
 
 const validation = function(){
-    
-    var password = document.getElementById('password').value;
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var email = document.getElementById('email').value;
-
-    if(password && firstName && lastName && email){
-        return true;
+    var condition = false
+    var elements = document.getElementsByClassName('error-message');
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++){
+        if(inputs[i].value == ''){
+            elements[i].style.display = 'flex';
+            inputs[i].style.backgroundImage = 'url(./images/icon-error.svg)';
+            condition = true
+        } else{
+            if(inputs[i].value != ''){
+                elements[i].style.display = 'none';
+                inputs[i].style.backgroundImage = 'none';
+        }
+        }
     }
-    else{
-        return false;
-    }
 
-    
-}
+    let emailv = emailVal();
+    if(emailv){
+        if(condition){
+            return false
+        } else{
+            return true
+        }
+
+    }else{
+        elements[2].style.display = 'flex';
+        inputs[2].style.backgroundImage = 'url(./images/icon-error.svg)';
+        inputs[2].value = '';
+        inputs[2].placeholder='email@example.com';
+    }
+}    
+
 
 const emailVal = function(){
     let email = document.getElementById('email').value;
